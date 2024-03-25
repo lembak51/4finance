@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Search for the book" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-25T09:06:24" hostname="MacBook-Pro-Volodymyr.local" time="28.47">
+  <properties/>
+  <testcase name="Search some book" classname="Search for the book" time="28.47"/>
+  <system-out><![CDATA[
+Scenario: Search some book                                                ?[90m# src/test/resources/feature.search/product_search.feature:4?[0m
+  ?[32mGiven ?[0m?[32mopen home page?[0m                                                    ?[90m# stepdefinitions.stepDefinitions.open_home_page()?[0m
+2024-03-25 11:06:36 INFO  page.HomePage:50 - Clicking on element: Language drop down
+2024-03-25 11:06:36 INFO  page.HomePage:50 - Clicking on element: English drop down option
+  ?[32mAnd ?[0m?[32mselect english language?[0m                                             ?[90m# stepdefinitions.stepDefinitions.enSelected()?[0m
+2024-03-25 11:06:42 INFO  page.HomePage:41 - Entering text "Control Your Mind and Master Your Feelings" to element: Search field 
+2024-03-25 11:06:43 INFO  page.HomePage:50 - Clicking on element: Search button 
+  ?[32mWhen ?[0m?[32muser searches book by ?[0m?[32m?[1m"Control Your Mind and Master Your Feelings"?[0m ?[90m# stepdefinitions.stepDefinitions.searchBookByName(java.lang.String)?[0m
+2024-03-25 11:06:45 INFO  page.SearchResultPage:50 - Clicking on element: Text present
+  ?[32mWhen ?[0m?[32mopen book by ?[0m?[32m?[1m"2018"?[0m                                                ?[90m# stepdefinitions.stepDefinitions.clickOnBookByYear(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mget author from API?[0m                                                 ?[90m# stepdefinitions.APIRequest.getRequestWithQueryParam()?[0m
+2024-03-25 11:06:51 INFO  page.BookDetailsPage:32 - Getting text of element: Author inscription 
+  ?[32mThen ?[0m?[32mCompare author from api and ui?[0m                                     ?[90m# stepdefinitions.stepDefinitions.compareNameOfAuthor()?[0m
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 123.0.6312.58 (6b4b19e9dfbb93aa414dc045bd445287977d8d7a-refs/branch-heads/6312_46@{#3}) on port 23419
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+]]></system-err>
+</testsuite>
